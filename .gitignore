@@ -1,0 +1,68 @@
+# Logs e ficheiros temporários
+*.log
+*.tmp
+*~
+
+# Ficheiros compilados Java
+*.class
+
+# Saída de Build (Maven, Gradle, etc.)
+/target/
+/build/
+/out/
+/dist/
+/nbdist/
+/bin/
+
+# Arquivos gerados (JARs, WARs, EARs) - Geralmente dentro das pastas de build acima
+*.jar
+*.war
+*.ear
+
+# Ficheiros de Cache e Configuração do Sistema de Build Gradle
+.gradle/
+/nbbuild/
+/.nb-gradle/
+
+# Ficheiros específicos do IntelliJ IDEA
+.idea/
+*.iml
+# Mantendo a sua regra original para 'out' dentro de src, embora incomum
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+# Ficheiros específicos do Eclipse
+.settings/
+.classpath
+.project
+.factorypath
+.apt_generated
+.springBeans
+.sts4-cache
+# Mantendo a sua regra original para 'bin' dentro de src, embora incomum
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+# Ficheiros específicos do NetBeans
+/nbproject/private/
+
+# Ficheiros específicos do VS Code
+.vscode/
+
+# Ficheiros específicos do Mac OS
+.DS_Store
+
+# Ficheiros específicos do Windows
+Thumbs.db
+
+# Ficheiros de configuração de execução/debug (Exemplo para IntelliJ, ajuste se necessário)
+# .idea/runConfigurations/ (já coberto por .idea/)
+
+# Dependências descarregadas (ex: pasta .m2 local, mas geralmente fora do projeto)
+# Se tiver alguma pasta de dependências local DENTRO do projeto, adicione-a aqui.
+
+# Ficheiros de configuração sensíveis (Se tiver algum ficheiro com passwords, chaves API, etc.)
+# config.properties
+# .env
+# secrets.yml
+# Lembre-se de NUNCA fazer commit de dados sensíveis!
