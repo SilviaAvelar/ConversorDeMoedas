@@ -58,6 +58,7 @@ Uma chave de API gratuita da ExchangeRate API
 
 
 📸 Captura de Tela
+![Captura de Tela do Conversor](assets/screenshot.png)
 
 
 Desenvolvido com 💙 por Silvia Avelar
