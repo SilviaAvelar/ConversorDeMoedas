@@ -6,6 +6,8 @@
 Bem-vindo ao **Conversor de Moedas** em Java!  
 Este é um aplicativo de terminal que consome a API pública da [ExchangeRate-API](https://www.exchangerate-api.com/) para realizar conversões entre moedas internacionais em tempo real.
 
+---
+
 ## 🖥️ Demonstração no Terminal
 
 ```bash
@@ -25,7 +27,7 @@ Este é um aplicativo de terminal que consome a API pública da [ExchangeRate-AP
 👉 Escolha uma opção:
 
 🔄 Buscando taxas de câmbio para USD...
-Resposta da API: {"result":"success","documentation":"https://www.exchangerate-api.com/docs","terms_of_use":"https://www.exchangerate-api.com/terms","time_last_update_unix":...,"time_last_update_utc":"...","time_next_update_unix":...,"time_next_update_utc":"...","base_code":"USD","conversion_rates":{"USD":1,"AED":3.6725,...,"BRL":5.15,...,"ARS":880.50,...,"COP":3920.75,...}}
+Resposta da API: {"result":"success","documentation":"https://www.exchangerate-api.com/docs","terms_of_use":"https://www.exchangerate-api.com/terms","base_code":"USD","conversion_rates":{"USD":1,"BRL":5.15,"ARS":880.50,"COP":3920.75}}
 
 💰 Digite o valor que deseja converter: 10
 
@@ -42,22 +44,21 @@ Resposta da API: {"result":"success","documentation":"https://www.exchangerate-a
 
 
 📌 Funcionalidades
-. Consulta de taxas de câmbio atualizadas
-. Conversão entre diferentes moedas
-. Interface amigável no terminal com cores e emojis
-. Validação de entrada do usuário
-. Tratamento de erros de conexão/API
+Consulta de taxas de câmbio atualizadas
+Conversão entre diferentes moedas
+Interface amigável no terminal com cores e emojis
+Validação de entrada do usuário
+Tratamento de erros de conexão/API
 
 
 ✅ Pré-requisitos
-. Java 17 ou superior
-. Conexão com a internet
-. Uma chave de API gratuita da ExchangeRate API
+Java 17 ou superior
+Conexão com a internet
+Uma chave de API gratuita da ExchangeRate API
 
 
 📸 Captura de Tela
 
 
-🙋‍♀️ Autora
 Desenvolvido com 💙 por Silvia Avelar
-🔗 [LinkedIn](https://linkedin.com/in/silvia-avelar) • [GitHub](https://github.com/SilviaAvelar) • [Portfólio](https://silviaavelar.github.io/Portfolio/)
+🔗 LinkedIn • GitHub • Portfólio
