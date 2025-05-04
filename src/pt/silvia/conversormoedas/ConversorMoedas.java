@@ -70,9 +70,10 @@ public class ConversorMoedas {
                     double taxaDestino = taxas.get(moedaDestino);
                     double valorConvertido = valorConverter * taxaDestino;
 
-                    System.out.println(ANSI_CYAN + "\n========= 💱 Resultado da Conversão 💱 =========");
-                    System.out.printf("  %.2f %s  =>  %.2f %s%n", valorConverter, moedaBase, valorConvertido, moedaDestino);
-                    System.out.println("===============================================" + ANSI_RESET);
+                    System.out.println(ANSI_CYAN + "\n========= 💱 Conversão Realizada 💱 =========" + ANSI_RESET);
+                    System.out.printf("📈 1 %s = %.2f %s%n", moedaBase, taxaDestino, moedaDestino);
+                    System.out.printf("💰 %.2f %s = %.2f %s%n", valorConverter, moedaBase, valorConvertido, moedaDestino);
+                    System.out.println(ANSI_CYAN + "==========================================" + ANSI_RESET);
                 } else {
                     System.out.printf("⚠️ Moeda de destino '%s' não encontrada nas taxas retornadas.%n", moedaDestino);
                 }

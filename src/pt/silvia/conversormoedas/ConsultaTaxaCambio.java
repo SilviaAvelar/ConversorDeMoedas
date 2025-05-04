@@ -22,7 +22,6 @@ public class ConsultaTaxaCambio {
 
             if (response.statusCode() == 200) {
                 String responseBody = response.body();
-                System.out.println("Resposta da API: " + responseBody); // Depuração
 
                 if (responseBody.contains("conversion_rates")) {
                     return new Gson().fromJson(responseBody, ApiResponse.class);
