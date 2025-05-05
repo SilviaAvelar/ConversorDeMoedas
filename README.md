@@ -58,7 +58,7 @@ Uma chave de API gratuita da ExchangeRate API
 
 
 📸 Captura de Tela
-![Captura do Projeto](./assets/logo.png)
+![Captura do Projeto](https://raw.githubusercontent.com/SilviaAvelar/ConversorDeMoedas/main/assets/logo.png)
 
 
 Desenvolvido com 💙 por Silvia Avelar
