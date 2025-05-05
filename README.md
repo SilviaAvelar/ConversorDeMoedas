@@ -31,24 +31,30 @@ Resposta da API: {"result":"success","documentation":"https://www.exchangerate-a
 
 💰 Digite o valor que deseja converter: 10
 
-========= 💱 Resultado da Conversão 💱 =========
+============ 💱 Resultado da Conversão 💱 =============
   10.00 USD  =>  51.50 BRL
-================================================
-
+=======================================================
+```
 
 🛠️ Tecnologias Utilizadas
-📦 Java 17+
-🌐 java.net.http.HttpClient
-📊 Biblioteca Gson para JSON parsing
-🎨 Cores ANSI para deixar o terminal mais interativo
+Este projeto foi construído utilizando as seguintes tecnologias e bibliotecas:
+☕ Java 17+: Versão mais recente do Java com as suas funcionalidades modernas.
+🌐 java.net.http.HttpClient: Cliente HTTP nativo do Java para realizar requisições à API.
+📦 Gson: Biblioteca do Google para serializar e desserializar objetos Java para JSON e vice-versa.
+🌈 Cores ANSI: Sequências de escape ANSI para adicionar cores e estilo ao texto no terminal, melhorando a interface do usuário.
 
 
-📌 Funcionalidades
-Consulta de taxas de câmbio atualizadas
-Conversão entre diferentes moedas
-Interface amigável no terminal com cores e emojis
-Validação de entrada do usuário
-Tratamento de erros de conexão/API
+## ✨ Funcionalidades
+
+*   🌍 **Taxas de Câmbio Atualizadas:** Busca as taxas mais recentes diretamente da API.
+*   🔄 **Múltiplas Conversões:** Suporta conversão entre as seguintes moedas e mais (via API):
+    *   Dólar Americano (USD)
+    *   Peso Argentino (ARS)
+    *   Real Brasileiro (BRL)
+    *   Peso Colombiano (COP)
+*   🎨 **Interface Amigável:** Utiliza cores ANSI e emojis para uma experiência mais interativa no terminal.
+*   🔒 **Validação de Entrada:** Verifica se as opções e valores inseridos pelo usuário são válidos.
+*   🔌 **Tratamento de Erros:** Gerencia possíveis erros de conexão com a API ou respostas inesperadas.
 
 
 ✅ Pré-requisitos
@@ -58,7 +64,29 @@ Uma chave de API gratuita da ExchangeRate API
 
 
 📸 Captura de Tela
-![Captura do Projeto](https://raw.githubusercontent.com/SilviaAvelar/ConversorDeMoedas/main/assets/logo.png)
+![Captura do Projeto](assets/logo.png)
 
 
-Desenvolvido com 💙 por Silvia Avelar
+🧑‍💻 Autor
+<p align="center">
+<img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&color=Fira&center=true&vCenter=true&width=650&height=70&duration=4000&lines=Olá!+Sou+a+Sílvia+Avelar...;Desenvolvedora+WEB...+Front-End...;Eternamente+Aprendendo...;Amante+de+Código+e+Café...;Confira+meus+links!+☕" alt="Typing SVG" />
+</p>
+<p align="center">
+Desenvolvido com 💙 por <strong>Sílvia Avelar</strong>
+</p>
+<p align="center">
+<a href="https://www.linkedin.com/in/silvia-avelar/" target="_blank">
+<img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+</a>
+&nbsp;&nbsp;
+<a href="https://silviaavelar.github.io/Portfolio/" target="_blank">
+<img src="https://img.shields.io/badge/-Portfólio-FF4081?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfólio">
+</a>
+&nbsp;&nbsp;
+<a href="https://github.com/SilviaAvelar" target="_blank">
+<img src="https://img.shields.io/badge/-GitHub-%23181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+</a>
+</p>
+<p align="center">
+Entre em contato ou veja outros projetos!
+</p>
