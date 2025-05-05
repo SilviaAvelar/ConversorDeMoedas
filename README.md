@@ -36,16 +36,15 @@ Resposta da API: {"result":"success","documentation":"https://www.exchangerate-a
 =======================================================
 ```
 
-🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 Este projeto foi construído utilizando as seguintes tecnologias e bibliotecas:
-☕ Java 17+: Versão mais recente do Java com as suas funcionalidades modernas.
-🌐 java.net.http.HttpClient: Cliente HTTP nativo do Java para realizar requisições à API.
-📦 Gson: Biblioteca do Google para serializar e desserializar objetos Java para JSON e vice-versa.
-🌈 Cores ANSI: Sequências de escape ANSI para adicionar cores e estilo ao texto no terminal, melhorando a interface do usuário.
+* ☕ **Java 17+: Versão mais recente do Java com as suas funcionalidades modernas.
+* 🌐 **java.net.http.HttpClient: Cliente HTTP nativo do Java para realizar requisições à API.
+* 📦 **Gson: Biblioteca do Google para serializar e desserializar objetos Java para JSON e vice-versa.
+* 🌈 **Cores ANSI: Sequências de escape ANSI para adicionar cores e estilo ao texto no terminal, melhorando a interface do usuário.
 
 
 ## ✨ Funcionalidades
-
 *   🌍 **Taxas de Câmbio Atualizadas:** Busca as taxas mais recentes diretamente da API.
 *   🔄 **Múltiplas Conversões:** Suporta conversão entre as seguintes moedas e mais (via API):
     *   Dólar Americano (USD)
@@ -57,17 +56,17 @@ Este projeto foi construído utilizando as seguintes tecnologias e bibliotecas:
 *   🔌 **Tratamento de Erros:** Gerencia possíveis erros de conexão com a API ou respostas inesperadas.
 
 
-✅ Pré-requisitos
-Java 17 ou superior
-Conexão com a internet
-Uma chave de API gratuita da ExchangeRate API
+## ✅ Pré-requisitos
+* Java 17 ou superior
+* Conexão com a internet
+* Uma chave de API gratuita da ExchangeRate API
 
 
-📸 Captura de Tela
+## 📸 Captura de Tela
 ![Captura do Projeto](assets/logo.png)
 
 
-🧑‍💻 Autor
+## 🧑‍💻 Autor
 <p align="center">
 <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&color=Fira&center=true&vCenter=true&width=650&height=70&duration=4000&lines=Olá!+Sou+a+Sílvia+Avelar...;Desenvolvedora+WEB...+Front-End...;Eternamente+Aprendendo...;Amante+de+Código+e+Café...;Confira+meus+links!+☕" alt="Typing SVG" />
 </p>
@@ -81,10 +80,6 @@ Desenvolvido com 💙 por <strong>Sílvia Avelar</strong>
 &nbsp;&nbsp;
 <a href="https://silviaavelar.github.io/Portfolio/" target="_blank">
 <img src="https://img.shields.io/badge/-Portfólio-FF4081?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfólio">
-</a>
-&nbsp;&nbsp;
-<a href="https://github.com/SilviaAvelar" target="_blank">
-<img src="https://img.shields.io/badge/-GitHub-%23181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
 </a>
 </p>
 <p align="center">
