@@ -23,8 +23,6 @@ public class ConsultaTaxaCambio {
 
     private String carregarApiKey() {
         Properties props = new Properties();
-        // Tenta carregar de um arquivo chamado config.properties na raiz do projeto
-        // Ajuste o caminho se o arquivo estiver em outro lugar
         try (InputStream input = new FileInputStream("config.properties")) {
             props.load(input);
             String key = props.getProperty("api.key");
@@ -33,7 +31,6 @@ public class ConsultaTaxaCambio {
             }
             return key;
         } catch (IOException ex) {
-            // Se o arquivo não for encontrado ou houver erro de leitura
             throw new RuntimeException("Erro ao carregar o arquivo de configuração 'config.properties'. Certifique-se de que ele existe e contém 'api.key'.", ex);
         }
     }
@@ -42,10 +39,8 @@ public class ConsultaTaxaCambio {
         URI uri = URI.create(String.format("%s%s/latest/%s", API_BASE_URL, this.apiKey, moedaBase));
         HttpRequest request = HttpRequest.newBuilder().uri(uri).build();
 
-        // O restante do método permanece igual ao anterior...
         try {
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-            // ... (lógica de tratamento da resposta) ...
             if (response.statusCode() == 200) {
                 String responseBody = response.body();
                 if (responseBody.contains("conversion_rates")) {
@@ -71,7 +66,6 @@ public class ConsultaTaxaCambio {
             return null;
         }
     }
-    // Adicione um método main para teste rápido (opcional)
     public static void main(String[] args) {
         try {
             ConsultaTaxaCambio consulta = new ConsultaTaxaCambio();
