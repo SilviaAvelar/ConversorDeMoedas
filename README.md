@@ -57,4 +57,8 @@ Conexão com a internet
 Uma chave de API gratuita da ExchangeRate API
 
 
+📸 Captura de Tela
+![Captura de tela do projeto](assets/captura.png)
+
+
 Desenvolvido com 💙 por Silvia Avelar
