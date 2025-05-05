@@ -1,50 +1,87 @@
 package pt.silvia.conversormoedas;
 
 import com.google.gson.Gson;
+
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.Properties;
 
 public class ConsultaTaxaCambio {
-    private static final String API_KEY = "35a52c309c2c5b92d1e92b9f";
-    private static final String API_BASE_URL = "https://v6.exchangerate-api.com/v6/";
 
-    private static final HttpClient client = HttpClient.newHttpClient();  // Usando um HttpClient reutilizável
+    private static final String API_BASE_URL = "https://v6.exchangerate-api.com/v6/";
+    private static final HttpClient client = HttpClient.newHttpClient();
+    private final String apiKey;
+
+    public ConsultaTaxaCambio() {
+        this.apiKey = carregarApiKey();
+    }
+
+    private String carregarApiKey() {
+        Properties props = new Properties();
+        // Tenta carregar de um arquivo chamado config.properties na raiz do projeto
+        // Ajuste o caminho se o arquivo estiver em outro lugar
+        try (InputStream input = new FileInputStream("config.properties")) {
+            props.load(input);
+            String key = props.getProperty("api.key");
+            if (key == null || key.trim().isEmpty()) {
+                throw new IllegalStateException("Chave 'api.key' não encontrada ou vazia no arquivo config.properties");
+            }
+            return key;
+        } catch (IOException ex) {
+            // Se o arquivo não for encontrado ou houver erro de leitura
+            throw new RuntimeException("Erro ao carregar o arquivo de configuração 'config.properties'. Certifique-se de que ele existe e contém 'api.key'.", ex);
+        }
+    }
 
     public ApiResponse buscaTaxas(String moedaBase) {
-        URI uri = URI.create(String.format("%s%s/latest/%s", API_BASE_URL, API_KEY, moedaBase));
+        URI uri = URI.create(String.format("%s%s/latest/%s", API_BASE_URL, this.apiKey, moedaBase));
         HttpRequest request = HttpRequest.newBuilder().uri(uri).build();
 
+        // O restante do método permanece igual ao anterior...
         try {
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-
+            // ... (lógica de tratamento da resposta) ...
             if (response.statusCode() == 200) {
                 String responseBody = response.body();
-
                 if (responseBody.contains("conversion_rates")) {
                     return new Gson().fromJson(responseBody, ApiResponse.class);
                 } else {
-                    System.out.println("Erro: Resposta da API não contém as taxas de conversão.");
+                    System.out.println("Erro: Resposta da API não contém as taxas de conversão. Resposta: " + responseBody);
                     return null;
                 }
             } else {
                 System.out.println("Erro API: " + response.statusCode() + " - " + response.body());
                 return null;
             }
-        } catch (IOException e) {
-            System.err.println("Erro de I/O ao conectar ou processar a API: " + e.getMessage());
+        } catch (IOException | InterruptedException e) {
+            if (e instanceof InterruptedException) {
+                Thread.currentThread().interrupt();
+            }
+            System.err.println("Erro durante a requisição à API: " + e.getMessage());
             e.printStackTrace();
-            return null;
-        } catch (InterruptedException e) {
-            System.err.println("A requisição foi interrompida: " + e.getMessage());
-            Thread.currentThread().interrupt();  // Restaura o status de interrupção
             return null;
         } catch (Exception e) {
-            System.err.println("Erro inesperado ao processar a consulta: " + e.getMessage());
+            System.err.println("Erro inesperado: " + e.getMessage());
             e.printStackTrace();
             return null;
+        }
+    }
+    // Adicione um método main para teste rápido (opcional)
+    public static void main(String[] args) {
+        try {
+            ConsultaTaxaCambio consulta = new ConsultaTaxaCambio();
+            ApiResponse resposta = consulta.buscaTaxas("USD");
+            if (resposta != null) {
+                System.out.println("Taxas de conversão para USD:");
+                System.out.println("Objeto de resposta completo: " + new Gson().toJson(resposta));
+            }
+        } catch (RuntimeException e) { // Captura a exceção lançada por carregarApiKey
+            System.err.println("Erro ao inicializar: " + e.getMessage());
         }
     }
 }

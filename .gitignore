@@ -1,3 +1,6 @@
+# Arquivo de configuração local - NÃO ENVIAR PARA O GIT
+config.properties
+
 # Logs e ficheiros temporários
 *.log
 *.tmp
@@ -27,6 +30,7 @@
 # Ficheiros específicos do IntelliJ IDEA
 .idea/
 *.iml
+
 # Mantendo a sua regra original para 'out' dentro de src, embora incomum
 !**/src/main/**/out/
 !**/src/test/**/out/
@@ -66,3 +70,5 @@ Thumbs.db
 # .env
 # secrets.yml
 # Lembre-se de NUNCA fazer commit de dados sensíveis!
+
+
