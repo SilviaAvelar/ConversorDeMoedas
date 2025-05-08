@@ -1,10 +1,12 @@
-# 💱 Conversor de Moedas - Java
+# 💱 Conversor de Moedas - Java 
+
+Bem-vindo ao **Conversor de Moedas** em Java!
 
 [![Java Version](https://img.shields.io/badge/Java-17%2B-%23ED8B00?style=for-the-badge&logo=openjdk)](https://openjdk.java.net/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![API Status](https://img.shields.io/badge/API-Online-green?style=for-the-badge)](https://www.exchangerate-api.com/)
 
-Bem-vindo ao **Conversor de Moedas** em Java!  
-Este é um aplicativo de terminal que consome a API pública da [ExchangeRate-API](https://www.exchangerate-api.com/) para realizar conversões entre moedas internacionais em tempo real.
+> Aplicativo de terminal que consome a API da [ExchangeRate-API](https://www.exchangerate-api.com/) para conversões monetárias em tempo real com dados do ECB
 
 ---
 
@@ -22,48 +24,56 @@ Este é um aplicativo de terminal que consome a API pública da [ExchangeRate-AP
 4️⃣  Real Brasileiro (BRL)      >> Dólar (USD)
 5️⃣  Dólar (USD)                >> Peso Colombiano (COP)
 6️⃣  Peso Colombiano (COP)      >> Dólar (USD)
-7️⃣  Sair ❌ 
+7️⃣  Sair ❌
 =======================================================
-👉 Escolha uma opção:
+
+👉 Escolha uma opção: 3
 
 🔄 Buscando taxas de câmbio para USD...
-Resposta da API: {"result":"success","documentation":"https://www.exchangerate-api.com/docs","terms_of_use":"https://www.exchangerate-api.com/terms","base_code":"USD","conversion_rates":{"USD":1,"BRL":5.15,"ARS":880.50,"COP":3920.75}}
-
 💰 Digite o valor que deseja converter: 10
 
-============ 💱 Resultado da Conversão 💱 =============
-  10.00 USD  =>  51.50 BRL
-=======================================================
+========= 💱 Conversão Realizada 💱 =========
+📈 1 USD = 5,72 BRL
+💰 10,00 USD = 57,20 BRL
+==========================================
+
+Pressione Enter para continuar...
 ```
 
 ## 🛠️ Tecnologias Utilizadas
-Este projeto foi construído utilizando as seguintes tecnologias e bibliotecas:
-* ☕ **Java 17+: Versão mais recente do Java com as suas funcionalidades modernas.
-* 🌐 **java.net.http.HttpClient: Cliente HTTP nativo do Java para realizar requisições à API.
-* 📦 **Gson: Biblioteca do Google para serializar e desserializar objetos Java para JSON e vice-versa.
-* 🌈 **Cores ANSI: Sequências de escape ANSI para adicionar cores e estilo ao texto no terminal, melhorando a interface do usuário.
+
+| Componente          | Detalhes                                                                  |
+|---------------------|--------------------------------------------------------------------------|
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width=20> **Java 17** | JDK com novos recursos como sealed classes |
+| <img src="https://img.shields.io/badge/HTTP_Client-Nativo-007396?style=flat-square" width=120> | Implementado via `java.net.http` |
+| <img src="https://img.shields.io/badge/Gson-2.10+-EA4335?style=flat-square&logo=google" width=100> | Desserialização de JSON |
+| <img src="https://img.shields.io/badge/ANSI-Terminal_Colors-000000?style=flat-square" width=120> | Formatação de texto colorido |
 
 
-## ✨ Funcionalidades
-*   🌍 **Taxas de Câmbio Atualizadas:** Busca as taxas mais recentes diretamente da API.
-*   🔄 **Múltiplas Conversões:** Suporta conversão entre as seguintes moedas e mais (via API):
-    *   Dólar Americano (USD)
-    *   Peso Argentino (ARS)
-    *   Real Brasileiro (BRL)
-    *   Peso Colombiano (COP)
-*   🎨 **Interface Amigável:** Utiliza cores ANSI e emojis para uma experiência mais interativa no terminal.
-*   🔒 **Validação de Entrada:** Verifica se as opções e valores inseridos pelo usuário são válidos.
-*   🔌 **Tratamento de Erros:** Gerencia possíveis erros de conexão com a API ou respostas inesperadas.
+## 🎯 Funcionalidades
+| Feature               | Descrição                                  |
+|-----------------------|--------------------------------------------|
+| 🌍 Multi-moedas       | Suporte a 160+ moedas via API              |
+| ⚡ Tempo real         | Taxas atualizadas hourly                  |
+| 🛡️ Validação         | Checagem de entradas inválidas            |
+| 📊 Logs               | Registro de operações em arquivo           |
 
 
 ## ✅ Pré-requisitos
-* Java 17 ou superior
-* Conexão com a internet
-* Uma chave de API gratuita da ExchangeRate API
+
+| <img src="https://img.shields.io/badge/Requisito-Detalhes-blue?style=flat-square" width=120> | <img src="https://img.shields.io/badge/Especificação-Importante-green?style=flat-square" width=150> |
+|-------------------------------|---------------------------------------------------------------------|
+| ![Java](https://img.shields.io/badge/Java-17%2B-ED8B00?style=flat-square&logo=java) | JDK instalado (verifique com `java -version`) |
+| ![Internet](https://img.shields.io/badge/Internet-Conectado-green?style=flat-square) | Conexão estável para chamadas API |
+| ![API Key](https://img.shields.io/badge/API_Key-Gratuita-FFA500?style=flat-square) | Obtenha em [ExchangeRate-API](https://www.exchangerate-api.com/) |
 
 
-## 📸 Captura de Tela
-![Captura do Projeto](assets/logo.png)
+## 🖼️ Demonstração Visual
+
+| Preview da Interface | Logo do Projeto |
+|----------------------|-----------------|
+| ![Interface do Conversor](assets/preview.png) | ![Logo](assets/logo.png) |
+*Interface do terminal e identidade visual do projeto*
 
 
 ## 🧑‍💻 Autor
